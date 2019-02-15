@@ -28,7 +28,7 @@ pipeline {
 
         stage ('Start stage') {
             steps {
-                sh 'java -jar -Dspring.profiles.active=dev testset.jar'
+                bash 'java -jar -Dspring.profiles.active=dev testset.jar'
             }
         }
     }
