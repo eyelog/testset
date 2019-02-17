@@ -28,7 +28,7 @@ pipeline {
 
         stage ('Running stage') {
             steps {
-                withJava(java : 'JAVA_HOME') {
+                run(java : 'JAVA_HOME') {
                     bat 'java -jar target/testset.jar'
                 }
 
