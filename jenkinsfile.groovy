@@ -30,7 +30,7 @@ pipeline {
 
         stage ('Running stage') {
             steps {
-                bat 'java -jar testset.jar'
+                bat 'java -jar target/testset.jar'
             }
         }
     }
