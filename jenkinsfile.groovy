@@ -31,7 +31,7 @@ pipeline {
         stage ('Running stage') {
             steps {
                 withMaven(maven : 'MAVEN_HOME') {
-                    bat 'mvn exec:java -jar testset.jar'
+                    bat 'java -cp target/testset.jar'
                 }
             }
         }
