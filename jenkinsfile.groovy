@@ -31,7 +31,7 @@ pipeline {
         stage ('Running stage') {
             steps {
                 withMaven(maven : 'MAVEN_HOME') {
-                    bat 'mvn run'
+                    bat 'mvn exec:java'
                 }
             }
         }
