@@ -25,11 +25,5 @@ pipeline {
                 }
             }
         }
-
-        stage ('Start stage') {
-            steps {
-                bat 'java -jar -Dspring.profiles.active=dev testset.jar'
-            }
-        }
     }
 }
