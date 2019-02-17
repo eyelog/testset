@@ -26,11 +26,13 @@ pipeline {
             }
         }
 
-
-
         stage ('Running stage') {
             steps {
-                bat 'java -jar target/testset.jar'
+                withJava(java : 'JAVA_HOME') {
+                    bat 'java -jar target/testset.jar'
+                }
+
+//                bat 'java -jar target/testset.jar'
             }
         }
     }
